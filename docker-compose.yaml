@@ -6,3 +6,20 @@
 #        docker-compose build
 
 version: '3.8'
+
+services:
+  # our app services below:
+  go-api-svc:
+    build:
+      context: ./services/go-api-svc
+      dockerfile: Dockerfile
+    image: go-api-svc
+    ports:
+      - "8080:5000"
+      - "8081:5001"
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://localhost:5000/api/health || exit 1" ]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s #adjust as neccesary. 
+      retries: 5
