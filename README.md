@@ -46,7 +46,7 @@ The services and technologies used in this project are as follows:
 | Service | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
 | go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | | | |
-| go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | Dapr | | |
+| go-api-svc-dapr | A golang service api with a simple api structure GoLang is quite performant. | Dapr | | |
 | nodejs-svc | A nodejs (typescript) service that starts and then ends. | | | |
 | nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | expressjs | | |
 | nodejs-api-svc-svelte | A nodejs (typescript) service api with a simple api structure | svelte | | |
