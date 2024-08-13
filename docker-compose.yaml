@@ -14,8 +14,8 @@ services:
     ports:
       - "50006:50006"
     networks:
-      - myapp-network
+      - dapr-network
 
 networks:
-  myapp-network:
+  dapr-network:
     driver: bridge
