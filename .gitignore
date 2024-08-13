@@ -71,3 +71,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+#nodejs
+**/node_modules🚫
