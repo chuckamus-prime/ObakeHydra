@@ -78,3 +78,4 @@ $RECYCLE.BIN/
 
 #nodejs
 **/node_modules
+**/dist
