@@ -28,9 +28,9 @@ docker build -t go-api-svc .
 Then run the container:
 
 ```bash
-docker run --rm go-api-svc
+docker run -d -p 5001:5001 --rm go-api-svc
 ```
 
 ### Note about modules
 
-you can check the status of the app by trying to reach the following URL: <http://localhost:8080/api/health> or <http://localhost:5000/api/health> depending on the port you are using
+you can check the status of the app by trying to reach the following URL: <http://localhost:5001/api/health>

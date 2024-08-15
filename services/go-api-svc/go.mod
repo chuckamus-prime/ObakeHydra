@@ -4,4 +4,4 @@ go 1.21.8
 
 toolchain go1.21.13
 
-require github.com/gorilla/mux v1.8.1 // indirect
+require github.com/gorilla/mux v1.8.1

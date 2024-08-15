@@ -14,7 +14,7 @@ func main() {
 
 	port := os.Getenv("HTTP_PORT")
 	if port == "" {
-		port = "5000" // Default port if not specified
+		port = "5001" // Default port if not specified
 	}
 	log.Fatal(http.ListenAndServe(":"+port, router))
 }

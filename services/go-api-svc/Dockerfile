@@ -17,10 +17,10 @@ RUN [ ! -f go.mod ] && go mod init go-app-svc || true && go mod tidy
 RUN go build -o main ./cmd/main.go
 
 # Set environment variable
-ENV HTTP_PORT=5000
+ENV HTTP_PORT=5001
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 5001
 
 # Command to run the executable
 CMD ["./main"]
