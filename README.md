@@ -45,7 +45,7 @@ The services and technologies used in this project are as follows:
 
 | Service | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
-| go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | | 5000 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc/services/go-api-svc) |
+| go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | | 5001 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc/services/go-api-svc) |
 | go-api-svc-dapr | A golang service api with a simple api structure GoLang is quite performant. | Dapr | | |
 | nodejs-svc | A nodejs (typescript) service that starts and then ends. | | | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc/services/nodejs-svc) |
 | nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | expressjs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
