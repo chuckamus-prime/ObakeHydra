@@ -32,5 +32,3 @@ _build/
 go.work
 go.work.sum
 
-# Go modules
-go.sum
