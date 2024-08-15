@@ -6,3 +6,10 @@
 #        docker-compose build
 
 version: '3.8'
+# our app services below:
+services:
+  nodejs-svc:
+    build:
+      context: ./services/nodejs-svc
+      dockerfile: Dockerfile
+    image: nodejs-svc
