@@ -2,11 +2,61 @@
 
 'Obake' is a Japanese term for a shape-shifting creature, and 'Hydra' is a creature from Greek mythology that has many heads. This project is a shape-shifting amalgamation of technologies shown in cooperation, for model architectures. As we build and add more variations, with changing technologies, often even more possibilities are revealed. The intent is to show how different technologies can be used together in a greater systems architecture. Sometimes, however, all you need is some example of technologies working in concert.
 
+## What this project is not
+
+- it <b>is not</b> a tutorial on how to use the individual technologies. The readme's hopefully will do a good job of pointing you in the right direction for that. It <b>is</b> a demonstration of how combining them and getting bootstrapped with them working together can be done.
+- it <b>is does not</b> take an opinionated stance on working with the technologies.
+- it <b>is not</b> intended to be a best practice guide.
+- it <b>is not</b> going to include all the things that you would need to make a production ready system, even using the technologies that is shows. For example, you will need to chose how you may have to chose your unit test frameworks.
+- it <b>is not</b> going to be in-line with how you would want to structure your project file system for a production system. The structure is the way it is to organize the set of technologies and combinations.
+
+For those things that this project <b>is not</b>, you will certainly find a million opinions and ideas and pontification on what is "best practice" on the internet and in books. Do your own research, and arrive at your own conclusions. This project is intended to be a starting point for you to explore the technologies and how they can work together and help you overcome the initial setup and linking ...frustrations.
+
+## What are some common starting points?
+
+All the components of this project are going to work with docker and docker compose. Docker compose lets us stand up a suite of things TOGETHER which is what we want. By being "container-first" with everything, we can:
+
+- be prepared to deploy services into container platforms like Kubernetes, OpenShift, etc.
+- be prepared to run services on a developer's workstation.
+- help assure that everyone's environment is the as identical as possible.
+- help assure that the services are isolated from each other.
+- help prepare for the services to be scaled if possible
+- demonstrate some of the common things constraints that you may experience if you try to combine these technologies elsewhere (outside of docker)
+- demonstrate modular architecture
+
+Also, any API we build should at the very least to demonstrate that it is up and alive, have a /api/health endpoint that returns a 200 status code. This is a common pattern in microservices and is a good way to demonstrate that the service is up and running. This is also typically a "secured" endpoint, so it is an easy one to make common for us to place. Other than APIs, other possible things we can add to show that things are really working may be put in. Just read up on the technologies readme in it's folder to find out.
+
+The healthcheck should also show that the service's dependencies are also up and running. For example, if a service depends on a database, the healthcheck 200 status should also mean that the database is up and running and accessible. This is a common practice and we will do that as much as possible.
+
+## Repo structure, purposes
+
+This repo is structured to help me build out the various technologies and services that I want to show.
+
+### main
+
+`main` is the branch where the base of the project is, but no services. I will keep it like that so that I can update that branch, and then merge it down to the rest of the branches. 
+
+### services
+
+The `services/* branches` are where the demonstrations live. Within each of those branches, there is a services folder and it will contain that branch's individual service folder. There may be other root folder changes that relate to that service demonstration needs. Within the service's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
+
+### miscellaneous
+
+The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. The <u>idea</u> here is that, should a combination call for including this or that infrastructure all we have to do is:
+
+- merge one of these miscellaneous branches into a new branch of an existing technology or service branch
+- rename a few things
+- configure a few things
+
+...and TADA! we have shown how the technologies can work in combination. 
+
+Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
+
+
 ## How To Build and Run
 
 This project has services that can be built and ran locally on a developers workstation, it can also run in a container on the developers
-workstation, and it can be deployed as containers into the container platform. In addition, the services (located in /services) can be started
-with the IDE to debug on a workstation.
+workstation, and it can be deployed as containers into the container platform. In addition, the services (located in /services) can be started with the IDE to debug on a workstation.
 
 ### Dependencies
 
@@ -34,9 +84,9 @@ To stop the environment containers, run the following command:
 docker-compose down --remove-orphans 
 ```
 
-## The Menu of technologies
+## The menu of technologies
 
-All the variations of the ObakeHydra will be in distinct branches for maintainability. Where possible, common components may have a "base" branch to help maintain down-stream variations of the Obake.
+All the variations of the ObakeHydra will be in distinct branches for maintainability (see above).
 
 ## Services
 
@@ -47,11 +97,11 @@ The services and technologies used in this project are as follows:
 | --- | --- | --- | --- | --- |
 | go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | | 5001 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc/services/go-api-svc) |
 | go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr/services/go-api-svc-dapr)|
-| nodejs-svc | A nodejs (typescript) service that starts and then ends. | | | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc/services/nodejs-svc) |
-| nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | expressjs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
+| nodejs-svc | A nodejs (typescript) service that starts and then ends. | none | Typescript | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc/services/nodejs-svc) |
+| nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | Typescript, ExpressJs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
 | nodejs-api-svc-svelte | A nodejs (typescript) service api with a simple api structure | svelte | | |
 | nodejs-api-svc-nestjs | A nodejs (typescript) service api with a simple api structure | nestjs | | |
-| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | expressjs, Dapr | | |
+| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
 | nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
 | nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
 | dotnet-svc | A dotnet core service that starts and stops. | | | |
@@ -117,3 +167,9 @@ In addition to the above, there are some other technologies that could be used, 
 - [Apache Camel](https://camel.apache.org/)
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file in the root of the project for details.
+
+
