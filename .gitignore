@@ -79,3 +79,7 @@ $RECYCLE.BIN/
 #nodejs
 **/node_modules
 **/dist
+
+
+# Go modules
+**/go.sum
