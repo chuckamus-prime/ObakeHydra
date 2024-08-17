@@ -7,7 +7,7 @@
 
 version: '3.8'
 services:
-  # our app services below:
+# our miscellaneous items:
   dapr-placement:
     image: "daprio/dapr"
     command: ["./placement", "--port", "50006"]
@@ -15,6 +15,8 @@ services:
       - "50006:50006"
     networks:
       - dapr-network
+
+# our app services below:
   go-api-svc-dapr:
     build:
       context: ./services/go-api-svc-dapr
@@ -44,10 +46,12 @@ services:
       "--resources-path", "./components"
     ]
     volumes:
-      - "./dapr/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
+      - ".miscellaneous/dapr/componentdefinitions/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
     depends_on:
       - go-api-svc-dapr
     network_mode: "service:go-api-svc-dapr" # Attach the gosvc service to the gosvc network namespace
+
+
 
 networks:
   dapr-network:
