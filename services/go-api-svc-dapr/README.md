@@ -20,17 +20,7 @@ go run ./cmd/main.go
 
 ### Docker
 
-To run the service in a Docker container, run the following command:
-
-```bash
-docker build -t go-api-svc-dapr .
-```
-
-Then run the container:
-
-```bash
-docker run --rm go-api-svc-dapr
-```
+See notes in the root README.md file for running the service in Docker with docker-compose. Trying to run this app with docker along (docker build... docker run...) 
 
 ## Testing the API
 

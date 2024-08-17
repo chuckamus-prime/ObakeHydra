@@ -1,5 +1,5 @@
 # probably the most simple Component. https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-inmemory/
-apiVersion: dapr.io/v1
+apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
   name: pubsub

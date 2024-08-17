@@ -22,5 +22,8 @@ RUN go build -o main ./cmd/main.go
 # Set environment variable
 ENV HTTP_PORT=5003
 
+# Expose port 5003 to the outside world
+EXPOSE 5003
+
 # Command to run the executable
 CMD ["./main"]

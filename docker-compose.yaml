@@ -46,7 +46,7 @@ services:
       "--resources-path", "./components"
     ]
     volumes:
-      - ".miscellaneous/dapr/componentdefinitions/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
+      - "./miscellaneous/dapr/componentdefinitions/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
     depends_on:
       - go-api-svc-dapr
     network_mode: "service:go-api-svc-dapr" # Attach the gosvc service to the gosvc network namespace
