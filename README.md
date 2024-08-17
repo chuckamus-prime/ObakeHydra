@@ -133,7 +133,7 @@ In addition to the above, there are some other technologies that could be used, 
 | pgadmin | A pgadmin gui for the database | | | |
 | relational-db-postgres | A postgres relational database | | | |
 | relational-db-sqlserver | A Sql Server relational database | | | |
-| graphql-hasura | A graphQL config host. | Hasura | | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
+| graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
 | messaging-rabbitmq | A RabbitMQ instance | | | |
 | messaging-activemq | A ActiveMQ instance | | | |
 | messaging-kafka | A Kafka instance | | | |
@@ -172,5 +172,3 @@ In addition to the above, there are some other technologies that could be used, 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file in the root of the project for details.
-
-
