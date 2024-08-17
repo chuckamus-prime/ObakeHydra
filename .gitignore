@@ -83,3 +83,6 @@ $RECYCLE.BIN/
 
 # Go modules
 **/go.sum
+
+# database data directory
+**/database-data/*
