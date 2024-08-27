@@ -180,7 +180,7 @@ The following are the combinations of the services and technologies that are dem
 - [Apache Camel](https://camel.apache.org/)
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
-= [Hadoop](https://hadoop.apache.org/)
+- [Hadoop](https://hadoop.apache.org/)
 
 ## License
 
