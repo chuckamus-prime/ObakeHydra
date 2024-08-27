@@ -8,11 +8,11 @@
 version: '3.8'
 # our app services below:
 services:
-  nodejs-api-svc-svelte:
+  nodejs-api-svc-sveltekit:
     build:
-      context: ./services/nodejs-api-svc-svelte
+      context: ./services/nodejs-api-svc-sveltekit
       dockerfile: Dockerfile
-    image: nodejs-api-svc-svelte
+    image: nodejs-api-svc-sveltekit
     ports:
       - "5006:5006" #http
     healthcheck:

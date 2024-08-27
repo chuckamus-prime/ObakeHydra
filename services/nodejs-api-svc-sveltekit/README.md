@@ -1,6 +1,6 @@
-# nodejs-api-svc-svelte
+# nodejs-api-svc-sveltekit
 
-This is a simple Node.js API service using Svelte and SvelteKit.
+This is a simple Node.js API service using Svelte and SvelteKit. You can both serve static content and also create an api for the app to use.
 
 ## Usage to run locally
 
@@ -15,8 +15,8 @@ Note that this will run the service on port 3000 which is the default port for n
 ## Usage to run in Docker
 
 ```bash
-docker build -t nodejs-api-svc-svelte .
-docker run -p 5007:3000 nodejs-api-svc-svelte
+docker build -t nodejs-api-svc-sveltekit .
+docker run -p 5007:3000 nodejs-api-svc-sveltekit
 ```
 
 ## Testing
