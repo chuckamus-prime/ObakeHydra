@@ -42,15 +42,18 @@ The `services/* branches` are where the demonstrations live. Within each of thos
 
 ### miscellaneous
 
-The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. The <u>idea</u> here is that, should a combination call for including this or that infrastructure all we have to do is:
+The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. 
+Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
 
-- merge one of these miscellaneous branches into a new branch of an existing technology or service branch
-- rename a few things
+### hydras
+
+The `hydras/* branches` are where the combinations of services and technologies are demonstrated. The <u>idea</u> here is that, should a combination call for including this or that infrastructure all we have to do is:
+
+- create a new branch under the `/hydras` branch path.
+- merge two or more of these service, miscellaneous, or even other hydra branches into the <b>new</b> hydra branch
 - configure a few things
 
-...and TADA! we have shown how the technologies can work in combination.
-
-Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
+...and TADA! we have shown how the technologies can work in combination. If more documentation is needed, we should include it under the proper sub-folders of they `/hydras` folder. There is a link to the branch for them on each line in the list below.
 
 ## How To Build and Run
 
@@ -92,33 +95,21 @@ All the variations of the ObakeHydra will be in distinct branches for maintainab
 All the variations of the ObakeHydra will be in distinct branches for maintainability. Where possible, common components may have a "base" branch to help maintain down-stream variations of the Obake.
 The services and technologies used in this project are as follows:
 
-| Service | Description | Technologies | Ports | Notes |
+| Name | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
 | go-api-svc | A golang service api with a simple api structure GoLang is quite performant. | | 5001 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc/services/go-api-svc) |
-| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr/services/go-api-svc-dapr)|
 | nodejs-svc | A nodejs (typescript) service that starts and then ends. | none | Typescript | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc/services/nodejs-svc) |
 | nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | Typescript, ExpressJs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
 | nodejs-api-svc-sveltekit | A nodejs (typescript) service api with a simple api structure and some static web content. | Typescript, Svelte, Sveltekit, Vite | 5006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit/services/nodejs-api-svc-sveltekit) |
 | nodejs-api-svc-nestjs | A nodejs (typescript) service api with a simple api structure | nestjs | | |
-| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
-| nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
-| nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
 | dotnet-svc | A dotnet core service that starts and stops. | | | |
-| dotnet-svc-dapr | A dotnet core service that starts and stops.  | Dapr | | |
 | dotnet-api-svc | A dotnet core service api with a simple api structure | | | |
-| dotnet-api-svc-dapr | A dotnet core service api with a simple api structure | Dapr | | |
 | jvm-springboot-api-svc | A java (springboot) service api with a simple api structure | Apache Maven | | |
 | jvm-quarkus-api-svc | A java (quarkus) service api with a simple api structure | Apache Maven | | |
-| jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
-| jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
 | python-svc | A python service that starts and stops. | | | |
-| python-svc-dapr | A python service that starts and stops.  | Dapr | | |
 | python-api-svc | A python service api with a simple api structure | Flask | | |
-| python-api-svc-dapr | A python service api with a simple api structure | Flask, Dapr | | |
 | rust-svc | A rust service that starts and stops. | | | |
-| rust-svc-dapr | A rust service that starts and stops.  | Dapr | | |
 | rust-api-svc | A rust service api with a simple api structure | | | |
-| rust-api-svc-dapr | A rust service api with a simple api structure | Dapr | | |
 
 ## Miscellaneous
 
@@ -138,6 +129,7 @@ In addition to the above, there are some other technologies that could be used, 
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
+| Apache Hadoop | A Hadoop instance | | | |
 
 ## Hydras
 
@@ -145,7 +137,19 @@ The following are the combinations of the services and technologies that are dem
 
 | Name | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
-| postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydra/postgres_pgadmin) |
+| postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin) |
+| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/services/go-api-svc-dapr)|
+| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
+| nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
+| nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
+| dotnet-svc-dapr | A dotnet core service that starts and stops.  | Dapr | | |
+| dotnet-api-svc-dapr | A dotnet core service api with a simple api structure | Dapr | | |
+| rust-svc-dapr | A rust service that starts and stops.  | Dapr | | |
+| rust-api-svc-dapr | A rust service api with a simple api structure | Dapr | | |
+| python-api-svc-dapr | A python service api with a simple api structure | Flask, Dapr | | |
+| python-svc-dapr | A python service that starts and stops.  | Dapr | | |
+| jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
+| jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
 
 ## links to technologies, frameworks, etc used above
 
@@ -176,9 +180,8 @@ The following are the combinations of the services and technologies that are dem
 - [Apache Camel](https://camel.apache.org/)
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
+= [Hadoop](https://hadoop.apache.org/)
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file in the root of the project for details.
-
-
