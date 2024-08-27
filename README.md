@@ -137,8 +137,8 @@ The following are the combinations of the services and technologies that are dem
 
 | Name | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
-| postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydra/postgres_pgadmin) |
-| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hyddra/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydra/go-api-svc-dapr/services/go-api-svc-dapr)|
+| postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin) |
+| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/services/go-api-svc-dapr)|
 | nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
 | nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
 | nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
@@ -180,7 +180,7 @@ The following are the combinations of the services and technologies that are dem
 - [Apache Camel](https://camel.apache.org/)
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
-= [Hadoop](https://hadoop.apache.org/)
+- [Hadoop](https://hadoop.apache.org/)
 
 ## License
 
