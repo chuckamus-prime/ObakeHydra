@@ -6,3 +6,25 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+
+  relational-db-postgres: # relational db server
+    image: postgres:16-alpine
+    restart: always
+    hostname: relational-db-postgres-host
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    volumes:
+        - ./miscellaneous/relational-db-postgres/db-data/:/var/lib/postgresql/data
+        - ./miscellaneous/relational-db-postgres/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+    ports:
+      - "5008:5432"
+    command: -p 5008      
+    healthcheck:
+      #CHANGE 1: this command checks if the database is ready, right on the source db server
+      test: [ "CMD-SHELL", "pg_isready -d demodb -U demo" ] # -d is for the database name, -U is for the user name
+      interval: 5s
+      timeout: 5s
+      retries: 5
