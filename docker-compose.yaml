@@ -6,3 +6,18 @@
 #        docker-compose build
 
 version: '3.8'
+# our app services below:
+services:
+  nodejs-api-svc-svelte:
+    build:
+      context: ./services/nodejs-api-svc-svelte
+      dockerfile: Dockerfile
+    image: nodejs-api-svc-svelte
+    ports:
+      - "5006:5006" #http
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://localhost:5006/api/health || exit 1" ]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s #adjust as neccesary. 
+      retries: 5

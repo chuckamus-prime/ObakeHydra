@@ -3,6 +3,10 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	server: {
+		port: 5006,
+		host: '0.0.0.0'
+	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

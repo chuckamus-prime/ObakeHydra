@@ -7,22 +7,25 @@ This is a simple Node.js API service using Svelte and SvelteKit.
 ```bash
 npm install
 npm run build
-npm run dev -- --open
+node build
 ```
+
+Note that this will run the service on port 3000 which is the default port for node.
 
 ## Usage to run in Docker
 
 ```bash
-docker build -t nodejs-api-svc-express .
-docker run -p 5007:5007 nodejs-api-svc-express
+docker build -t nodejs-api-svc-svelte .
+docker run -p 5007:3000 nodejs-api-svc-svelte
 ```
 
-## Testing the API
+## Testing
 
-Right now, there is only one endpoint that returns a simple health check. If you run in docker, or run locally, using localhost and the configured port, you should be able to reach the health check endpoint.
+You can test that the home page loads on the base route.
+Right now, there is only one api endpoint, that returns a simple health check. If you run in docker, or run locally, using localhost and the configured port, you should be able to reach the health check endpoint.
 
 ```bash
-curl http://localhost:5007/api/health
+curl http://localhost:5006/api/health
 ```
 
 ## License
