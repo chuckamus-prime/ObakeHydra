@@ -48,10 +48,9 @@ The `miscellaneous/* branches` are where the infrastructure and support services
 - rename a few things
 - configure a few things
 
-...and TADA! we have shown how the technologies can work in combination. 
+...and TADA! we have shown how the technologies can work in combination.
 
 Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
-
 
 ## How To Build and Run
 
@@ -139,6 +138,14 @@ In addition to the above, there are some other technologies that could be used, 
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
+
+## Hydras
+
+The following are the combinations of the services and technologies that are demonstrated in the branches of this project:
+
+| Name | Description | Technologies | Ports | Notes |
+| --- | --- | --- | --- | --- |
+| postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydra/postgres_pgadmin) |
 
 ## links to technologies, frameworks, etc used above
 
