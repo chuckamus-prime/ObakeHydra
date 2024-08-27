@@ -99,7 +99,7 @@ The services and technologies used in this project are as follows:
 | go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/go-api-svc-dapr/services/go-api-svc-dapr)|
 | nodejs-svc | A nodejs (typescript) service that starts and then ends. | none | Typescript | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-svc/services/nodejs-svc) |
 | nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | Typescript, ExpressJs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
-| nodejs-api-svc-svelte | A nodejs (typescript) service api with a simple api structure | Typescript, Svelte, Sveltekit | 5006, 5007 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-svelte), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-svelte/services/nodejs-api-svc-svelte)  |
+| nodejs-api-svc-sveltekit | A nodejs (typescript) service api with a simple api structure and some static web content. | Typescript, Svelte, Sveltekit, Vite | 5006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit/services/nodejs-api-svc-sveltekit) |
 | nodejs-api-svc-nestjs | A nodejs (typescript) service api with a simple api structure | nestjs | | |
 | nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
 | nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
@@ -130,8 +130,8 @@ In addition to the above, there are some other technologies that could be used, 
 | dapr | The basic parts of a environment to support Dapr | Dapr | |  [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/dapr), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/dapr/miscellaneous/dapr/) |
 | redis-cache | A simple Redis cache | | | |
 | redis-streams | A configured redis streams instance | | | |
-| pgadmin | A pgadmin gui for the database | | | |
-| relational-db-postgres | A postgres relational database | | | |
+| pgadmin | A pgadmin gui for the database | Postgres, PGAdmin | 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin/miscellaneous/pgadmin/) |
+| relational-db-postgres | A postgres relational database | Postgres | 5008 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres/miscellaneous/relational-db-postgres/) |
 | relational-db-sqlserver | A Sql Server relational database | | | |
 | graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
 | messaging-rabbitmq | A RabbitMQ instance | | | |
@@ -159,6 +159,7 @@ In addition to the above, there are some other technologies that could be used, 
 - [Redis](https://redis.io/)
 - [Redis Streams](https://redis.io/topics/streams)
 - [Postgres](https://www.postgresql.org/)
+- [PGAdmin](https://www.pgadmin.org/)
 - [Sql Server](https://www.microsoft.com/en-us/sql-server)
 - [Hasura](https://hasura.io/)
 - [RabbitMQ](https://www.rabbitmq.com/)
