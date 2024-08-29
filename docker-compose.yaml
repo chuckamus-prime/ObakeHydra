@@ -6,8 +6,20 @@
 #        docker-compose build
 
 version: '3.8'
-# our app services below:
 services:
+# our miscellaneous items:
+
+  dapr-placement:
+    image: "daprio/dapr"
+    command: ["./placement", "--port", "50006"]
+    ports:
+      - "50006:50006"
+    networks:
+      - dapr-network
+
+
+# our app services below:
+
   nodejs-api-svc-express:
     build:
       context: ./services/nodejs-api-svc-express
@@ -21,4 +33,8 @@ services:
       timeout: 5s
       start_period: 10s #adjust as neccesary. 
       retries: 5
+
+networks:
+  dapr-network:
+    driver: bridge
 
