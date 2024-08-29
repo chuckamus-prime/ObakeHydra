@@ -6,3 +6,19 @@
 #        docker-compose build
 
 version: '3.8'
+# our app services below:
+services:
+  nodejs-api-svc-express:
+    build:
+      context: ./services/nodejs-api-svc-express
+      dockerfile: Dockerfile
+    image: nodejs-api-svc-express
+    ports:
+      - "5002:5002" #http
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://localhost:5002/api/health || exit 1" ]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s #adjust as neccesary. 
+      retries: 5
+
