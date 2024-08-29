@@ -102,7 +102,7 @@ The services and technologies used in this project are as follows:
 | nodejs-api-svc-express | A nodejs (typescript) service api with a simple api structure | Typescript, ExpressJs | 5002 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-express/services/nodejs-api-svc-express) |
 | nodejs-api-svc-sveltekit | A nodejs (typescript) service api with a simple api structure and some static web content. | Typescript, Svelte, Sveltekit, Vite | 5006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/nodejs-api-svc-sveltekit/services/nodejs-api-svc-sveltekit) |
 | nodejs-api-svc-nestjs | A nodejs (typescript) service api with a simple api structure | nestjs | | |
-| dotnet-svc | A dotnet core service that starts and stops. | | | |
+| dotnet-svc | A dotnet core service that starts and stops. | dotnet, c#, NUnit (testing) | none | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/dotnet-svc), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/dotnet-svc/services/dotnet-svc) |
 | dotnet-api-svc | A dotnet core service api with a simple api structure | | | |
 | jvm-springboot-api-svc | A java (springboot) service api with a simple api structure | Apache Maven | | |
 | jvm-quarkus-api-svc | A java (quarkus) service api with a simple api structure | Apache Maven | | |

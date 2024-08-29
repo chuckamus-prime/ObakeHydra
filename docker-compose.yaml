@@ -6,3 +6,14 @@
 #        docker-compose build
 
 version: '3.8'
+
+services:
+# our app services below:
+  dotnet-svc:
+    build:
+      context: ./services/dotnet-svc
+      dockerfile: Dockerfile
+    image: go-api-svc
+
+    ports:
+      - "5010:5010"
