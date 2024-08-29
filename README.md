@@ -118,8 +118,7 @@ In addition to the above, there are some other technologies that could be used, 
 | Name | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
 | dapr | The basic parts of a environment to support Dapr | Dapr | |  [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/dapr), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/dapr/miscellaneous/dapr/) |
-| redis-cache | A simple Redis cache | | | |
-| redis-streams | A configured redis streams instance | | | |
+| redis-stack | A Redis-Stack instance. | Redis | | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/redis-stack), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/redis-stack/miscellaneous/redis-stack/) |
 | pgadmin | A pgadmin gui for the database | Postgres, PGAdmin | 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin/miscellaneous/pgadmin/) |
 | relational-db-postgres | A postgres relational database | Postgres | 5008 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres/miscellaneous/relational-db-postgres/) |
 | relational-db-sqlserver | A Sql Server relational database | | | |

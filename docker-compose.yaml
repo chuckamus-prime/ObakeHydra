@@ -6,3 +6,13 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+  redis-stack:
+    # this service comes from the image: redis/redis-stack:latest
+    image: redis/redis-stack:latest
+    ports:
+      - "5011:8001"
+      - "5010:6379"
+
+    
