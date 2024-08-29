@@ -112,3 +112,8 @@ $RECYCLE.BIN/
 # Vite
 **/vite.config.js.timestamp-*
 **/vite.config.ts.timestamp-*
+
+
+## dotnet apps
+**/bin
+**/obj
