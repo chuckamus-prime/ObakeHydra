@@ -6,3 +6,27 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+  relational-db-sqlserver: # relational db server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    hostname: relational-db-sqlserver-host
+    environment:
+      MSSQL_DB_AUDIT_LOG: events_service_audit_log
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: P@ssw0rd
+      MSSQL_PID: Developer
+    volumes:
+      - ./miscellaneous/relational-db-sqlserver/database-data/:/var/opt/mssql
+    ports:
+      - 5012:1433
+    expose:  
+      - 1433
+    healthcheck:
+      test: [ "CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssw0rd -Q \"Select 1\"" ]
+      interval: 30s
+      timeout: 30s
+      start_period: 60s
+      retries: 5
+# our app services below:
