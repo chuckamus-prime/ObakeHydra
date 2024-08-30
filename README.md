@@ -121,7 +121,7 @@ In addition to the above, there are some other technologies that could be used, 
 | redis-stack | A Redis-Stack instance. | Redis | 5010, 5011| [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/redis-stack), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/redis-stack/miscellaneous/redis-stack/) |
 | pgadmin | A pgadmin gui for the database | Postgres, PGAdmin | 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/pgadmin/miscellaneous/pgadmin/) |
 | relational-db-postgres | A postgres relational database | Postgres | 5008 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres/miscellaneous/relational-db-postgres/) |
-| relational-db-sqlserver | A Sql Server relational database | | | |
+| relational-db-sqlserver | A Sql Server relational database | Microsoft SQL Server | 5012 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver/miscellaneous/relational-db-sqlserver/) |
 | graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
 | messaging-rabbitmq | A RabbitMQ instance | | | |
 | messaging-activemq | A ActiveMQ instance | | | |
