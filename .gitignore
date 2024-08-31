@@ -1,3 +1,6 @@
+# local files that the user wants to keep from scm
+local/
+
 # IDE and editor specific files
 .idea/
 **/.idea
@@ -115,3 +118,8 @@ $RECYCLE.BIN/
 
 # postgres data directory
 **/db-data
+
+
+## dotnet apps
+**/bin
+**/obj
