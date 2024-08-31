@@ -1,3 +1,13 @@
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+*.iws
+*.ipr
+
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -14,16 +24,6 @@
 
 # Output of the go build tool
 _build/
-
-# IDE and editor specific files
-.idea/
-.vscode/
-*.swp
-*.swo
-*.iml
-*.iws
-*.ipr
-
 
 # Dependency directories (remove the comment below if you use Go modules)
 # /vendor/
