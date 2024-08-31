@@ -78,30 +78,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-#nodejs
-**/node_modules
-**/dist
-
-
-# Go modules
-**/go.sum
-
-
-# database data directory
-**/database-data/*
-
-
-# svelte
-
-**/node_modules
-
-# Output
-**/.output
-**/.vercel
-**/.svelte-kit
-**/build
-
 # OS
 **/.DS_Store
 **/Thumbs.db
@@ -112,10 +88,27 @@ $RECYCLE.BIN/
 !**/.env.example
 !**/.env.test
 
+#service specific ignores. we include them at this level incase we switch branches and their artifacts are not cleared during the switch. 
+
+# Go modules
+**/go.sum
+
+# database data directory
+**/database-data/*
+
+# nodejs
+**/node_modules
+**/dist
+
+# svelte Output
+**/.output
+**/.vercel
+**/.svelte-kit
+**/build
+
 # Vite
 **/vite.config.js.timestamp-*
 **/vite.config.ts.timestamp-*
-
 
 ## dotnet apps
 **/bin
