@@ -128,7 +128,9 @@ In addition to the above, there are some other technologies that could be used, 
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
-| Apache Hadoop | A Hadoop instance | | | |
+| integration-nifi | A NiFi instance | | | |
+| hadoop | A Hadoop instance | | | |
+| nginx | An Nginx instance | | | |
 
 ## Hydras
 
@@ -180,6 +182,8 @@ The following are the combinations of the services and technologies that are dem
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
 - [Hadoop](https://hadoop.apache.org/)
+- [NiFi](https://nifi.apache.org/)
+- [Nginx](https://www.nginx.com/)
 
 ## License
 
