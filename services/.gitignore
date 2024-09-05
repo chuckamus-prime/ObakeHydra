@@ -1,0 +1,82 @@
+#service specific ignores. we include them at this level incase we switch branches and their artifacts are not cleared during the switch. 
+##############################
+# go
+# modules
+**/go.sum
+
+# Binaries for programs and plugins
+**/*.exe
+**/*.exe~
+**/*.dll
+**/*.so
+**/*.dylib
+
+# Test binary, build output
+**/*.test
+**/*.out
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+**/*.coverprofile
+
+# Output of the go build tool
+**/_build/
+
+# Dependency directories (remove the comment below if you use Go modules)
+# /vendor/
+
+# Go workspace file
+**/go.work
+**/go.work.sum
+
+##############################
+# nodejs
+**/dist
+
+# Logs
+**/logs
+**/*.log
+**/npm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+**/pids
+**/*.pid
+**/*.seed
+**/*.pid.lock
+
+# Dependency directories
+**/node_modules/
+
+# TypeScript cache
+**/*.tsbuildinfo
+
+# Optional npm cache directory
+**/.npm
+
+# Optional eslint cache
+**/.eslintcache
+
+# Output of 'npm pack'
+**/*.tgz
+
+# Stores VSCode versions used for testing VSCode extensions
+**/.vscode-test
+
+# svelte Output
+**/.output
+**/.vercel
+**/.svelte-kit
+**/build
+
+# Vite
+**/vite.config.js.timestamp-*
+**/vite.config.ts.timestamp-*
+
+##############################
+## dotnet apps
+**/bin
+**/obj
+
+##############################
