@@ -3,7 +3,7 @@ package handlers
 import (
 	"context"
 	"encoding/json"
-	"go-api-svc-dapr/internal/dapr"
+	"go-api-svc/internal/dapr"
 	"log"
 	"net/http"
 	"os"

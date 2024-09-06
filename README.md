@@ -40,20 +40,64 @@ This repo is structured to help me build out the various technologies and servic
 
 The `services/* branches` are where the demonstrations live. Within each of those branches, there is a services folder and it will contain that branch's individual service folder. There may be other root folder changes that relate to that service demonstration needs. Within the service's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
 
+``` text
+=============== example of service branch ===============
+
+services/*       ->    ----.---.---.---.
+                      /           /   
+main             ->  .-----------.----
+```
+
+- Branches from `main` ONLY. <b>Never</b> merges back.
+- Gets periodic updates from `main`.
+
+
 ### miscellaneous
 
 The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. 
 Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
+``` text
+============ example of miscellaneous branch ============
+
+miscellaneous/*  ->    ----.-------.---.
+                      /           /   
+main             ->  .-----------.----
+```
+
+- Branches from `main` ONLY. <b>Never</b> merges back.
+- Gets periodic updates from `main`.
 
 ### hydras
 
 The `hydras/* branches` are where the combinations of services and technologies are demonstrated. The <u>idea</u> here is that, should a combination call for including this or that infrastructure all we have to do is:
 
-- create a new branch under the `/hydras` branch path.
-- merge two or more of these service, miscellaneous, or even other hydra branches into the <b>new</b> hydra branch
+- create a new branch under the `/hydras` branch path. Can source from any other branch that contains stuff you want in the new hydra.
+- merge of any service, miscellaneous, or even other hydra branches into the <b>new</b> hydra branch
 - configure a few things
 
 ...and TADA! we have shown how the technologies can work in combination. If more documentation is needed, we should include it under the proper sub-folders of they `/hydras` folder. There is a link to the branch for them on each line in the list below.
+
+
+``` text
+
+================ example of hydra branch ================
+
+hydras/d         ->      -----------------.-.-.---.------
+                        /                / / /
+miscellaneous/c  ->    ----.--------.--. / /
+                      /                 / /
+services/b       ->  | ------.---.-----. /
+                     |/                 /
+services/a       ->  | ----.---.---.---.
+                     |/              
+main             ->  .----------------
+
+```
+
+- Can be a branch from main, `services/*` or `miscellaneous/*`, or even `hydras/*`. <b>Never</b> merges back.
+- Gets periodic updates from all sources if necessary.
+
+
 
 ## How To Build and Run
 
@@ -128,7 +172,9 @@ In addition to the above, there are some other technologies that could be used, 
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
-| Apache Hadoop | A Hadoop instance | | | |
+| integration-nifi | A NiFi instance | | | |
+| hadoop | A Hadoop instance | | | |
+| nginx | An Nginx instance | | | |
 
 ## Hydras
 
@@ -137,7 +183,7 @@ The following are the combinations of the services and technologies that are dem
 | Name | Description | Technologies | Ports | Notes |
 | --- | --- | --- | --- | --- |
 | postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin) |
-| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5003 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/services/go-api-svc-dapr)|
+| go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5001, 50006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/services/go-api-svc-dapr)|
 | nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
 | nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
 | nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
@@ -180,6 +226,8 @@ The following are the combinations of the services and technologies that are dem
 - [GraphQL](https://graphql.org/)
 - [pgAdmin](https://www.pgadmin.org/)
 - [Hadoop](https://hadoop.apache.org/)
+- [NiFi](https://nifi.apache.org/)
+- [Nginx](https://www.nginx.com/)
 
 ## License
 

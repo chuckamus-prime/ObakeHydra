@@ -17,30 +17,30 @@ services:
       - dapr-network
 
 # our app services below:
-  go-api-svc-dapr:
+  go-api-svc:
     build:
-      context: ./services/go-api-svc-dapr
+      context: ./services/go-api-svc
       dockerfile: Dockerfile
-    image: go-api-svc-dapr
+    image: go-api-svc-dapr # give it a different image name than original
     ports:
-      - "5003:5003"
+      - "5001:5001"
     healthcheck:
       test: [ "CMD-SHELL", "curl --fail http://localhost:5001/api/health || exit 1" ]
       interval: 15s
       timeout: 5s
-      start_period: 10s #adjust as neccesary. 
+      start_period: 10s #adjust as neccesary.
       retries: 5
     networks:
-      - dapr-network
+      - dapr-network # add to dapr network
     depends_on:
-      - dapr-placement
-
-  go-api-svc-dapr-sidecar:
+      - dapr-placement # add dependency on placement
+# add the dapr sidecar container for the go-api-svc
+  go-api-svc-sidecar:
     image: "daprio/daprd:edge"
     command: [
       "./daprd",
-      "--app-id", "go-api-svc-dapr",
-      "--app-port", "5003",
+      "--app-id", "go-api-svc",
+      "--app-port", "5001",
       "--dapr-grpc-port", "50001",
       "--placement-host-address", "placement:50006", # Dapr's placement service can be reach via the docker DNS entry
       "--resources-path", "./components"
@@ -48,10 +48,8 @@ services:
     volumes:
       - "./miscellaneous/dapr/componentdefinitions/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
     depends_on:
-      - go-api-svc-dapr
-    network_mode: "service:go-api-svc-dapr" # Attach the gosvc service to the gosvc network namespace
-
-
+      - go-api-svc
+    network_mode: "service:go-api-svc" # Attach the gosvc service to the gosvc network namespace
 
 networks:
   dapr-network:

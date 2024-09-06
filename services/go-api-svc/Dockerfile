@@ -1,5 +1,5 @@
 # Use the official Golang image as the base image
-FROM golang:1.21-alpine
+FROM golang:1.22-alpine
 
 #install curl since the healthcheck is using curl
 RUN apk add --no-cache curl
@@ -20,10 +20,10 @@ COPY . .
 RUN go build -o main ./cmd/main.go
 
 # Set environment variable
-ENV HTTP_PORT=5003
+ENV HTTP_PORT=5001
 
-# Expose port 5003 to the outside world
-EXPOSE 5003
+# Expose port 5001 to the outside world
+EXPOSE 5001
 
 # Command to run the executable
 CMD ["./main"]

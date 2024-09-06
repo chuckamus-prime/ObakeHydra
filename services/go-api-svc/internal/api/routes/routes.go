@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gorilla/mux"
-	"go-api-svc-dapr/internal/api/handlers"
+	"go-api-svc/internal/api/handlers/healthcheck"
 )
 
 func SetupRouter() *mux.Router {

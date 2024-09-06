@@ -1,8 +1,9 @@
 package dapr
 
 import (
-	"github.com/dapr/go-sdk/client"
 	"log"
+
+	"github.com/dapr/go-sdk/client"
 )
 
 // InitDaprClient initializes and returns a Dapr client.
