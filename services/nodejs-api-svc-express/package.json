@@ -4,22 +4,22 @@
     "description": "This is a simple Node.js API service using Express.js.",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "tsc",
-      "start": "node dist/index.js",
-      "dev": "ts-node src/index.ts",
-      "clean": "rm -rf dist"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "ts-node src/index.ts",
+        "clean": "rm -rf dist"
     },
     "author": "github.com/chuckamus-prime",
     "license": "MIT",
     "dependencies": {
-      "express": "^4.19.2"
+        "@dapr/dapr": "^3.4.0",
+        "express": "^4.19.2"
     },
     "devDependencies": {
-      "@types/express": "^4.17.21",
-      "@types/node": "^22.2.0",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.5.4"
+        "@types/express": "^4.17.21",
+        "@types/node": "^22.2.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4"
     }
-  }
-  
+}

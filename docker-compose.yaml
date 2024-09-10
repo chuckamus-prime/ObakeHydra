@@ -24,15 +24,41 @@ services:
     build:
       context: ./services/nodejs-api-svc-express
       dockerfile: Dockerfile
-    image: nodejs-api-svc-express
+    image: nodejs-api-svc-express-dapr # give it a different image name than original
     ports:
       - "5002:5002" #http
+    environment:
+      - DAPR_PORT=5002 
+      - DAPR_GRPC_PORT=50001 # The GRPC port that the Dapr sidecar is listening on. 
+      - DAPR_HTTP_PORT=50002 # The HTTP port that the Dapr sidecar is listening on. 
+
     healthcheck:
       test: [ "CMD-SHELL", "curl --fail http://localhost:5002/api/health || exit 1" ]
       interval: 15s
       timeout: 5s
       start_period: 10s #adjust as neccesary. 
       retries: 5
+    networks:
+      - dapr-network # add to dapr network
+    depends_on:
+      - dapr-placement # add dependency on placement
+# add the dapr sidecar container for the go-api-svc
+  nodejs-api-svc-express-sidecar:
+    image: "daprio/daprd:edge"
+    command: [
+      "./daprd",
+      "--app-id", "nodejs-api-svc-express",
+      "--app-port", "5002", # the port the app listens on (dapr)
+      "--dapr-grpc-port", "50001", 
+      "--dapr-http-port", "50002",
+      "--placement-host-address", "dapr-placement:50006", # Dapr's placement service can be reach via the docker DNS entry
+      "--resources-path", "./components"
+    ]
+    volumes:
+      - "./miscellaneous/dapr/componentdefinitions/localdev/:/components" # Mount our components folder for the runtime to use. The mounted location must match the --resources-path argument.
+    depends_on:
+      - nodejs-api-svc-express
+    network_mode: "service:nodejs-api-svc-express" # Attach the nodejs-api-svc-express service to the nodejs-api-svc-express network namespace
 
 networks:
   dapr-network:

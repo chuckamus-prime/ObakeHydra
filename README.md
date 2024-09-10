@@ -34,7 +34,7 @@ This repo is structured to help me build out the various technologies and servic
 
 ### main
 
-`main` is the branch where the base of the project is, but no services. I will keep it like that so that I can update that branch, and then merge it down to the rest of the branches. 
+`main` is the branch where the base of the project is, but no services. I will keep it like that so that I can update that branch, and then merge it down to the rest of the branches.
 
 ### services
 
@@ -50,7 +50,6 @@ main             ->  .-----------.----
 
 - Branches from `main` ONLY. <b>Never</b> merges back.
 - Gets periodic updates from `main`.
-
 
 ### miscellaneous
 
@@ -184,7 +183,7 @@ The following are the combinations of the services and technologies that are dem
 | --- | --- | --- | --- | --- |
 | postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin/hydras/postgres_pgadmin/) |
 | go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5001, 50006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/hydras/go-api-svc-dapr/)|
-| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
+| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | NodeJs, Typescript, ExpressJs, Dapr | 5002, 50001, 50002, 50006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/nodejs-api-svc-express_dapr), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/nodejs-api-svc-express_dapr/hydras/nodejs-api-svc-express_dapr/) |
 | nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
 | nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
 | dotnet-svc-dapr | A dotnet core service that starts and stops.  | Dapr | | |
