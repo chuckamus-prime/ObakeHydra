@@ -1,3 +1,6 @@
+# local files that the user wants to keep from scm
+local/
+
 # IDE and editor specific files
 .idea/
 **/.idea
@@ -75,30 +78,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-#nodejs
-**/node_modules
-**/dist
-
-
-# Go modules
-**/go.sum
-
-
-# database data directory
-**/database-data/*
-
-
-# svelte
-
-**/node_modules
-
-# Output
-**/.output
-**/.vercel
-**/.svelte-kit
-**/build
-
 # OS
 **/.DS_Store
 **/Thumbs.db
@@ -108,12 +87,3 @@ $RECYCLE.BIN/
 **/.env.*
 !**/.env.example
 !**/.env.test
-
-# Vite
-**/vite.config.js.timestamp-*
-**/vite.config.ts.timestamp-*
-
-
-## dotnet apps
-**/bin
-**/obj
