@@ -168,6 +168,7 @@ In addition to the above, there are some other technologies that could be used, 
 | relational-db-sqlserver | A Sql Server relational database | Microsoft SQL Server | 5012 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver/miscellaneous/relational-db-sqlserver/) |
 | graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
 | messaging-rabbitmq | A RabbitMQ instance | RabbitMQ | 5013, 5014 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq/miscellaneous/messaging-rabbitmq/)|
+| messaging-rocketmq | A RocketMQ instance | | | |
 | messaging-activemq | A ActiveMQ instance | | | |
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
