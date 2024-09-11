@@ -6,3 +6,33 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+  messaging-rocketmq:
+    image: apache/rocketmq:latest
+    #container_name: rmqbroker
+    ports:
+      - 5016:10909
+      - 5017:10911
+      - 5018:10912
+    environment:
+      - NAMESRV_ADDR=messaging-rocketmq-namesrv:5015
+    volumes:
+      - ./miscellaneous/messaging-rocketmq/broker.conf:/home/rocketmq/rocketmq-4.9.6/conf/broker.conf
+    depends_on:
+      - messaging-rocketmq-namesrv
+    networks:
+      - rocketmq
+    command: sh mqbroker -c /home/rocketmq/rocketmq-4.9.6/conf/broker.conf
+
+  messaging-rocketmq-namesrv:
+    image: apache/rocketmq:latest
+    #container_name: rmqnamesrv
+    ports:
+      - 5015:9876
+    networks:
+      - rocketmq
+    command: sh mqnamesrv
+networks:
+  rocketmq:
+    driver: bridge
