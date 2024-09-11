@@ -167,9 +167,9 @@ In addition to the above, there are some other technologies that could be used, 
 | relational-db-postgres | A postgres relational database | Postgres | 5008 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres/miscellaneous/relational-db-postgres/) |
 | relational-db-sqlserver | A Sql Server relational database | Microsoft SQL Server | 5012 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver/miscellaneous/relational-db-sqlserver/) |
 | graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
-| messaging-rabbitmq | A RabbitMQ instance | RabbitMQ | 5013, 5014 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq/miscellaneous/messaging-rabbitmq/)|
-| messaging-rocketmq | A RocketMQ instance | | | |
-| messaging-activemq | A ActiveMQ instance | | | |
+| messaging-rabbitmq | A RabbitMQ instance | RabbitMQ | 5013, 5014 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq/miscellaneous/messaging-rabbitmq/) |
+| messaging-rocketmq | An Apache RocketMQ instance | Apache RocketMQ | 5015, 5016, 5017, 5018 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rocketmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rocketmq/miscellaneous/messaging-rocketmq/) |
+| messaging-activemq | An Apache ActiveMQ instance | | | |
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
@@ -220,6 +220,7 @@ The following are the combinations of the services and technologies that are dem
 - [Hasura](https://hasura.io/)
 - [RabbitMQ](https://www.rabbitmq.com/)
 - [ActiveMQ](https://activemq.apache.org/)
+- [RocketMQ](https://rocketmq.apache.org/)
 - [Kafka](https://kafka.apache.org/)
 - [NATS](https://nats.io/)
 - [Apache Camel](https://camel.apache.org/)
