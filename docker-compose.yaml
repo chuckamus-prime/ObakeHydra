@@ -6,3 +6,14 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+  messaging-rabbit-mq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5013:5013"
+      - "5014:15672"
+    environment:
+      - RABBITMQ_NODE_PORT=5013
+      
+
