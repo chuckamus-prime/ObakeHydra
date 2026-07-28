@@ -154,6 +154,7 @@ The services and technologies used in this project are as follows:
 | python-api-svc | A python service api with a simple api structure | Flask | | |
 | rust-svc | A rust service that starts and stops. | | | |
 | rust-api-svc | A rust service api with a simple api structure | | | |
+| php | A plain PHP site (no build/compile step) served by nginx + php-fpm in a single container, supervised by supervisord. | PHP, nginx, php-fpm, supervisord | 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php/services/php/) |
 
 ## Miscellaneous
 
@@ -229,6 +230,9 @@ The following are the combinations of the services and technologies that are dem
 - [Hadoop](https://hadoop.apache.org/)
 - [NiFi](https://nifi.apache.org/)
 - [Nginx](https://www.nginx.com/)
+- [PHP](https://www.php.net/)
+- [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
+- [Supervisord](http://supervisord.org/)
 
 ## License
 
