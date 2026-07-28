@@ -196,6 +196,7 @@ The following are the combinations of the services and technologies that are dem
 | python-svc-dapr | A python service that starts and stops.  | Dapr | | |
 | jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
 | jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
 
 ## links to technologies, frameworks, etc used above
 

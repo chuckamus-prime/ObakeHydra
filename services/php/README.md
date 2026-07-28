@@ -1,5 +1,11 @@
 # php
 
+> On this branch (`hydras/php-nginx-sqlserver`), this folder has been turned
+> into a small SQL Server-backed todo app. See
+> [hydras/php-nginx-sqlserver/README.md](../../hydras/php-nginx-sqlserver/README.md)
+> for the hydra-specific details. The description below still applies to the
+> base "nginx + php-fpm" plumbing.
+
 This is a plain PHP site with **no build or compilation step** &mdash; just
 `.php` files served directly. It demonstrates PHP as a "drop files and run"
 stack, in contrast to the compiled/bundled services elsewhere in this repo
@@ -32,10 +38,8 @@ services/php/
 │   ├── nginx.conf         # nginx server block (proxies *.php to php-fpm)
 │   └── supervisord.conf   # runs nginx + php-fpm together
 └── src/                   # the actual web root
-    ├── index.php
-    ├── about.php
-    ├── contact.php
-    ├── nav.php             # shared nav include
+    ├── index.php           # the todo app (list, add, toggle, delete)
+    ├── db.php              # PDO/sqlsrv connection + self-provisioning
     ├── style.css
     ├── 404.html
     └── api/health.php
@@ -43,12 +47,10 @@ services/php/
 
 ## Pages
 
-- `/` (`index.php`) — home page, shows the PHP version/SAPI/time to prove
-  php-fpm is actually executing the code
-- `/about.php`
-- `/contact.php`
-- `/api/health` — returns a `200` with a small JSON body, so this can be
-  used as a healthcheck target
+- `/` (`index.php`) &mdash; the todo app: list, add, toggle, and delete
+  items, backed by the `relational-db-sqlserver` service
+- `/api/health` &mdash; returns a `200` with a small JSON body (and checks
+  the SQL Server connection), so this can be used as a healthcheck target
 - anything else returns a `404` served from `404.html`
 
 ## Usage
