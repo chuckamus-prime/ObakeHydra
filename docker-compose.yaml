@@ -6,3 +6,17 @@
 #        docker-compose build
 
 version: '3.8'
+services:
+# our miscellaneous items:
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "5019:80"
+    volumes:
+      - ./miscellaneous/nginx/html:/usr/share/nginx/html:ro
+      - ./miscellaneous/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+
+# our app services below:
+

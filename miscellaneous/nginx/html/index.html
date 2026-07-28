@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ObakeHydra &middot; nginx demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ObakeHydra &middot; nginx</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Home</h2>
+        <p>
+            This is a plain, static site served entirely by <strong>nginx</strong> &mdash;
+            no application server, no compilation step. It exists to demonstrate nginx
+            on its own before it gets paired with something else (like PHP) in a
+            future <code>hydras/*</code> branch.
+        </p>
+        <p>
+            Everything here is production-grade: the official <code>nginx</code> image,
+            a real server block in <code>conf/default.conf</code>, gzip enabled, and a
+            <code>/api/health</code> endpoint per this repo's convention.
+        </p>
+        <p>Try the health check: <a href="/api/health">/api/health</a></p>
+    </main>
+</body>
+</html>

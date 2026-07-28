@@ -175,7 +175,7 @@ In addition to the above, there are some other technologies that could be used, 
 | integration-camel | An Apache Camel instance | | | |
 | integration-nifi | A NiFi instance | | | |
 | hadoop | A Hadoop instance | | | |
-| nginx | An Nginx instance | | | |
+| nginx | An Nginx instance serving a small static site with a few navigable pages. | Nginx | 5019 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/nginx), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/nginx/miscellaneous/nginx/) |
 
 ## Hydras
 
