@@ -8,7 +8,29 @@
 version: '3.8'
 
 services:
-  # our app services below:
+# our miscellaneous items:
+  relational-db-sqlserver: # relational db server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    hostname: relational-db-sqlserver-host
+    environment:
+      MSSQL_DB_AUDIT_LOG: events_service_audit_log
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: P@ssw0rd
+      MSSQL_PID: Developer
+    volumes:
+      - ./miscellaneous/relational-db-sqlserver/database-data/:/var/opt/mssql
+    ports:
+      - 5012:1433
+    expose:  
+      - 1433
+    healthcheck:
+      test: [ "CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P P@ssw0rd -Q \"Select 1\"" ]
+      interval: 30s
+      timeout: 30s
+      start_period: 60s
+      retries: 5
+# our app services below:
   php:
     build:
       context: ./services/php
@@ -16,10 +38,18 @@ services:
     image: php-svc
     ports:
       - "5020:80"
+    environment:
+      DB_HOST: relational-db-sqlserver-host
+      DB_PORT: 1433
+      DB_NAME: tododb
+      DB_USER: sa
+      DB_PASSWORD: P@ssw0rd
+    depends_on:
+      relational-db-sqlserver:
+        condition: service_healthy
     healthcheck:
       test: [ "CMD-SHELL", "curl --fail http://localhost/api/health || exit 1" ]
       interval: 15s
       timeout: 5s
       start_period: 10s #adjust as necessary.
       retries: 5
-
