@@ -28,7 +28,9 @@ services:
     ports:
       - "5002:5002" #http
     environment:
-      - DAPR_PORT=5002 
+      - DAPR_SERVER_PORT=6000 
+      - HTTP_PORT=5002
+      - DAPR_APP_PORT=6000 # Internal port for Dapr server (different from Express app port)
       - DAPR_GRPC_PORT=50001 # The GRPC port that the Dapr sidecar is listening on. 
       - DAPR_HTTP_PORT=50002 # The HTTP port that the Dapr sidecar is listening on. 
 
@@ -48,7 +50,7 @@ services:
     command: [
       "./daprd",
       "--app-id", "nodejs-api-svc-express",
-      "--app-port", "5002", # the port the app listens on (dapr)
+      "--app-port", "6000", # the port the Express app listens on
       "--dapr-grpc-port", "50001", 
       "--dapr-http-port", "50002",
       "--placement-host-address", "dapr-placement:50006", # Dapr's placement service can be reach via the docker DNS entry
