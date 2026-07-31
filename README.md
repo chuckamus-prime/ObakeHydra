@@ -177,6 +177,9 @@ In addition to the above, there are some other technologies that could be used, 
 | integration-nifi | A NiFi instance | | | |
 | hadoop | A Hadoop instance | | | |
 | nginx | An Nginx instance | | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
+
+
 
 ## Hydras
 
