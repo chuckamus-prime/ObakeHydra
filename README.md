@@ -51,12 +51,12 @@ main             ->  .-----------.----
 - Branches from `main` ONLY. <b>Never</b> merges back.
 - Gets periodic updates from `main`.
 
-
 ### miscellaneous
 
 The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. 
 Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
-``` text
+
+```plaintext
 ============ example of miscellaneous branch ============
 
 miscellaneous/*  ->    ----.-------.---.
@@ -76,7 +76,6 @@ The `hydras/* branches` are where the combinations of services and technologies 
 - configure a few things
 
 ...and TADA! we have shown how the technologies can work in combination. If more documentation is needed, we should include it under the proper sub-folders of they `/hydras` folder. There is a link to the branch for them on each line in the list below.
-
 
 ``` text
 
