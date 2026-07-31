@@ -154,6 +154,7 @@ The services and technologies used in this project are as follows:
 | python-api-svc | A python service api with a simple api structure | Flask | | |
 | rust-svc | A rust service that starts and stops. | | | |
 | rust-api-svc | A rust service api with a simple api structure | | | |
+| php | A plain PHP site (no build/compile step) served by nginx + php-fpm in a single container, supervised by supervisord. | PHP, nginx, php-fpm, supervisord | 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php/services/php/) |
 
 ## Miscellaneous
 
@@ -175,7 +176,10 @@ In addition to the above, there are some other technologies that could be used, 
 | integration-camel | An Apache Camel instance | | | |
 | integration-nifi | A NiFi instance | | | |
 | hadoop | A Hadoop instance | | | |
-| nginx | An Nginx instance serving a small static site with a few navigable pages. | Nginx | 5019 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/nginx), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/nginx/miscellaneous/nginx/) |
+| nginx | An Nginx instance | | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
+
+
 
 ## Hydras
 
@@ -229,6 +233,10 @@ The following are the combinations of the services and technologies that are dem
 - [Hadoop](https://hadoop.apache.org/)
 - [NiFi](https://nifi.apache.org/)
 - [Nginx](https://www.nginx.com/)
+- [PHP](https://www.php.net/)
+- [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
+- [Supervisord](http://supervisord.org/)
+
 
 ## License
 
