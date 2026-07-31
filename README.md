@@ -51,12 +51,12 @@ main             ->  .-----------.----
 - Branches from `main` ONLY. <b>Never</b> merges back.
 - Gets periodic updates from `main`.
 
-
 ### miscellaneous
 
 The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. 
 Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
-``` text
+
+```plaintext
 ============ example of miscellaneous branch ============
 
 miscellaneous/*  ->    ----.-------.---.
@@ -77,7 +77,6 @@ The `hydras/* branches` are where the combinations of services and technologies 
 
 ...and TADA! we have shown how the technologies can work in combination. If more documentation is needed, we should include it under the proper sub-folders of they `/hydras` folder. There is a link to the branch for them on each line in the list below.
 
-
 ``` text
 
 ================ example of hydra branch ================
@@ -96,8 +95,6 @@ main             ->  .----------------
 
 - Can be a branch from main, `services/*` or `miscellaneous/*`, or even `hydras/*`. <b>Never</b> merges back.
 - Gets periodic updates from all sources if necessary.
-
-
 
 ## How To Build and Run
 
@@ -154,6 +151,7 @@ The services and technologies used in this project are as follows:
 | python-api-svc | A python service api with a simple api structure | Flask | | |
 | rust-svc | A rust service that starts and stops. | | | |
 | rust-api-svc | A rust service api with a simple api structure | | | |
+| php | A plain PHP site (no build/compile step) served by nginx + php-fpm in a single container, supervised by supervisord. | PHP, nginx, php-fpm, supervisord | 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php), [Service Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/services/php/services/php/) |
 
 ## Miscellaneous
 
@@ -167,8 +165,9 @@ In addition to the above, there are some other technologies that could be used, 
 | relational-db-postgres | A postgres relational database | Postgres | 5008 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-postgres/miscellaneous/relational-db-postgres/) |
 | relational-db-sqlserver | A Sql Server relational database | Microsoft SQL Server | 5012 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/relational-db-sqlserver/miscellaneous/relational-db-sqlserver/) |
 | graphql-hasura | A graphQL config host. | Hasura, Postgres | 5004,5005 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/graphql-hasura/miscellaneous/graphql-hasura/) |
-| messaging-rabbitmq | A RabbitMQ instance | | | |
-| messaging-activemq | A ActiveMQ instance | | | |
+| messaging-rabbitmq | A RabbitMQ instance | RabbitMQ | 5013, 5014 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rabbitmq/miscellaneous/messaging-rabbitmq/) |
+| messaging-rocketmq | An Apache RocketMQ instance | Apache RocketMQ | 5015, 5016, 5017, 5018 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rocketmq), [Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/miscellaneous/messaging-rocketmq/miscellaneous/messaging-rocketmq/) |
+| messaging-activemq | An Apache ActiveMQ instance | | | |
 | messaging-kafka | A Kafka instance | | | |
 | messaging-nats | A NATS instance | | | |
 | integration-camel | An Apache Camel instance | | | |
@@ -184,8 +183,7 @@ The following are the combinations of the services and technologies that are dem
 | --- | --- | --- | --- | --- |
 | postgres_pgadmin | A postgres database coupled with pgadmin gui for the database | Postgres, PGAdmin | 5008, 5009 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/postgres_pgadmin/hydras/postgres_pgadmin/) |
 | go-api-svc-dapr | A golang service api with a simple api structure, and dapr integration. | Dapr | 5001, 50006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/go-api-svc-dapr/hydras/go-api-svc-dapr/)|
-| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | ExpressJs, Dapr | | |
-| nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
+| nodejs-api-svc-express-dapr | A nodejs (typescript) service api with a simple api structure | NodeJs, Typescript, ExpressJs, Dapr | 5002, 50001, 50002, 50006 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/nodejs-api-svc-express_dapr), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/nodejs-api-svc-express_dapr/hydras/nodejs-api-svc-express_dapr/) || nodejs-api-svc-svelte-dapr | A nodejs (typescript) service api with a simple api structure | svelte, Dapr | | |
 | nodejs-api-svc-nestjs-dapr | A nodejs (typescript) service api with a simple api structure | nestjs, Dapr | | |
 | dotnet-svc-dapr | A dotnet core service that starts and stops.  | Dapr | | |
 | dotnet-api-svc-dapr | A dotnet core service api with a simple api structure | Dapr | | |
@@ -195,6 +193,7 @@ The following are the combinations of the services and technologies that are dem
 | python-svc-dapr | A python service that starts and stops.  | Dapr | | |
 | jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
 | jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
 
 ## links to technologies, frameworks, etc used above
 
@@ -220,6 +219,7 @@ The following are the combinations of the services and technologies that are dem
 - [Hasura](https://hasura.io/)
 - [RabbitMQ](https://www.rabbitmq.com/)
 - [ActiveMQ](https://activemq.apache.org/)
+- [RocketMQ](https://rocketmq.apache.org/)
 - [Kafka](https://kafka.apache.org/)
 - [NATS](https://nats.io/)
 - [Apache Camel](https://camel.apache.org/)
@@ -228,6 +228,9 @@ The following are the combinations of the services and technologies that are dem
 - [Hadoop](https://hadoop.apache.org/)
 - [NiFi](https://nifi.apache.org/)
 - [Nginx](https://www.nginx.com/)
+- [PHP](https://www.php.net/)
+- [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
+- [Supervisord](http://supervisord.org/)
 
 ## License
 
