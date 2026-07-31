@@ -51,12 +51,12 @@ main             ->  .-----------.----
 - Branches from `main` ONLY. <b>Never</b> merges back.
 - Gets periodic updates from `main`.
 
-
 ### miscellaneous
 
 The `miscellaneous/* branches` are where the infrastructure and support services live. Pretty much the same as the services branches, but for the infrastructure and support services. These branches may be able to demonstrate the infrastructure alone without "services" to integrate with. For example, a postgres folder may demonstrate postgres and a UI but have nothing else connecting to it. 
 Within the miscellaneous item's individual folder, more details can be found. There is a link to the readme for them on each line in the list below.
-``` text
+
+```plaintext
 ============ example of miscellaneous branch ============
 
 miscellaneous/*  ->    ----.-------.---.
@@ -77,7 +77,6 @@ The `hydras/* branches` are where the combinations of services and technologies 
 
 ...and TADA! we have shown how the technologies can work in combination. If more documentation is needed, we should include it under the proper sub-folders of they `/hydras` folder. There is a link to the branch for them on each line in the list below.
 
-
 ``` text
 
 ================ example of hydra branch ================
@@ -96,8 +95,6 @@ main             ->  .----------------
 
 - Can be a branch from main, `services/*` or `miscellaneous/*`, or even `hydras/*`. <b>Never</b> merges back.
 - Gets periodic updates from all sources if necessary.
-
-
 
 ## How To Build and Run
 
@@ -177,9 +174,6 @@ In addition to the above, there are some other technologies that could be used, 
 | integration-nifi | A NiFi instance | | | |
 | hadoop | A Hadoop instance | | | |
 | nginx | An Nginx instance | | | |
-| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
-
-
 
 ## Hydras
 
@@ -199,6 +193,7 @@ The following are the combinations of the services and technologies that are dem
 | python-svc-dapr | A python service that starts and stops.  | Dapr | | |
 | jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
 | jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
 
 ## links to technologies, frameworks, etc used above
 
