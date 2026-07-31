@@ -97,8 +97,6 @@ main             ->  .----------------
 - Can be a branch from main, `services/*` or `miscellaneous/*`, or even `hydras/*`. <b>Never</b> merges back.
 - Gets periodic updates from all sources if necessary.
 
-
-
 ## How To Build and Run
 
 This project has services that can be built and ran locally on a developers workstation, it can also run in a container on the developers
@@ -177,9 +175,6 @@ In addition to the above, there are some other technologies that could be used, 
 | integration-nifi | A NiFi instance | | | |
 | hadoop | A Hadoop instance | | | |
 | nginx | An Nginx instance | | | |
-| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
-
-
 
 ## Hydras
 
@@ -199,6 +194,7 @@ The following are the combinations of the services and technologies that are dem
 | python-svc-dapr | A python service that starts and stops.  | Dapr | | |
 | jvm-springboot-api-svc-dapr | A java (springboot) service api with a simple api structure | Apache Maven, Dapr | | |
 | jvm-quarkus-api-svc-dapr | A java (quarkus) service api with a simple api structure | Apache Maven, Dapr | | |
+| php-nginx-sqlserver | A no-auth PHP todo app (nginx + php-fpm) backed by a SQL Server database via the sqlsrv/pdo_sqlsrv drivers. | PHP, nginx, php-fpm, supervisord, Microsoft SQL Server | 5012, 5020 | [Branch](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver), [Hydra Readme](https://github.com/chuckamus-prime/ObakeHydra/tree/hydras/php-nginx-sqlserver/hydras/php-nginx-sqlserver/) |
 
 ## links to technologies, frameworks, etc used above
 
@@ -236,7 +232,6 @@ The following are the combinations of the services and technologies that are dem
 - [PHP](https://www.php.net/)
 - [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
 - [Supervisord](http://supervisord.org/)
-
 
 ## License
 
